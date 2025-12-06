@@ -1,0 +1,165 @@
+.choose {
+  position: relative;
+  padding-top: 104px;
+  padding-bottom: 40px;
+
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__why-list {
+    display: flex;
+    flex-direction: column; /* карточки одна під одною */
+    align-items: stretch;
+    gap: 16px;
+    margin-bottom: 0;
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1.3;
+    justify-content: center;
+     align-items: center; 
+  }
+}
+
+.why-card {
+  width: 100%;
+  max-width: 360px;
+  height: 181px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  background-color: var(--color-brend-light);
+  border-radius: 32px;
+  box-shadow: 0px 4px 4px rgba(168, 198, 245, 0.38);
+  padding: 12px;
+  position: relative;
+  z-index: 1;
+
+  &__why-info {
+    padding-top: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.why-icon {
+  fill: var(--color-brend);
+  background-color: var(--color-brend-light);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.background-wave {
+  background-image: url("../images/background-choose.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+  padding-top: 150px;
+}
+
+.section-title {
+  color: var(--color-brend-dark);
+  font-family: Play, sans-serif;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  max-width: 360px;
+  margin: 0 auto 24px auto;
+
+  &--centered {
+    text-align: center;
+  }
+}
+
+/* === DESKTOP === */
+@media screen and (min-width: $bp-desktop) {
+  .choose {
+    padding-top: 200px;
+    padding-bottom: 48px;
+
+    &__title {
+      margin-bottom: 48px;
+      text-align: left;
+    }
+
+    &__why-list {
+      flex-direction: row;
+      gap: 56px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+  }
+
+  .why-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 316px;
+    height: 181px;
+    box-shadow: 0px 4px 4px rgba(168, 198, 245, 0.38);
+    border-radius: 32px;
+    padding: 12px;
+    gap: 16px;
+    text-align: center;
+    background-color: var(--color-brend-light);
+    position: relative; /* важно для z-index */
+    z-index: 1;
+
+    &__why-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; // вертикально центр
+      align-items: center; // горизонтально центр
+      text-align: center;
+      height: 100%; // займає всю висоту карточки
+      padding: 0;
+    }
+  }
+  .why-icon {
+    fill: var(--color-brend);
+    background-color: var(--color-brend-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    box-sizing: border-box;
+  }
+  .section-title {
+    color: var(--color-brend-dark);
+    font-family: Play, sans-serif;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    max-width: 600px;
+    &--centered {
+      text-align: center;
+    }
+
+    .background-wave {
+      padding-top: 60px;
+    }
+  }
+}

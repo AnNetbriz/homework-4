@@ -1,0 +1,39 @@
+.form-input::placeholder {
+  color: var(--color-brend-light);
+  line-height: 1;
+  font-size: 13px;
+}
+
+.form-terms {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 400;
+  width: 213px;
+  height: 36px;
+  margin: 0 auto;
+  color: #747272;
+
+  &__link {
+    color: #747272;
+    text-underline-offset: 3px;
+  }
+}
+
+.sign-up-modal {
+  margin-top: 40px;
+  margin-bottom: 32px;
+  color: var(--color-brend-light);
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+.sign-up-modal .accent {
+  color: var(--color-brend);
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}

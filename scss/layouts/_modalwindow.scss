@@ -1,0 +1,114 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: opacity 0.2s, visibility 0.2s;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  padding: 48px;
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  max-height: 681px;
+  background-color: var(--color-brend-dark);
+  border-radius: 48px;
+  color: var(--color-brend-light);
+  @media screen and (min-width: $bp-desktop) {
+    padding: 42px 144px;
+    max-width: 723px;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 42px;
+    right: 42px;
+    border: none;
+    font-size: 32px;
+    color: #ffffff;
+    cursor: pointer;
+    line-height: 1;
+    background: transparent;
+  }
+  &.is-hidden {
+    display: none;
+  }
+  &__form-field {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  &__button {
+    display: block;
+    margin: 0 auto 8px;
+  }
+}
+
+.form-label {
+  position: absolute;
+  top: 18px;
+  left: 32.85px;
+  line-height: 1;
+  font-size: 13px;
+  font-family: Roboto, sans-serif;
+}
+
+.form-button:hover {
+  background-color: var(--color-brend-light);
+  color: var(--color-brend-dark);
+}
+
+.form-input {
+  padding: 18px 32.85px;
+  width: 100%;
+  line-height: 1;
+  font-size: 13px;
+  border: 2px solid #747272;
+  border-radius: 32px;
+  background-color: transparent;
+  font-family: Roboto, sans-serif;
+  width: 310px;
+  height: 52px;
+  display: block;
+  margin: 0 auto 8px;
+}
+.form-input:focus {
+  background-color: #747272;
+  outline: none;
+  color: var(--color-brend-light);
+}
+.form-input::placeholder {
+  color: var(--color-brend-light);
+  line-height: 1;
+  font-size: 13px;
+}
+.form-input:focus::placeholder {
+  color: var(--color-brend-light);
+}
+
+.order-call {
+  color: var(--color-brend-light);
+  font-family: Play, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin: 0 auto;
+
+  @media screen and (min-width: $bp-desktop) {
+    font-size: 64px;
+  }
+}

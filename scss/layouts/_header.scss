@@ -1,0 +1,87 @@
+.header {
+  background: rgba(255, 255, 255, 0.25); /* белый с прозрачностью */
+  backdrop-filter: blur(5px); /* размытие фона */
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 32px 0;
+  }
+  &__nav {
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      gap: 56px;
+    }
+  }
+  &__icons {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      align-items: center;
+      gap: 32px; /* расстояние между иконками */
+    }
+  }
+  &__item {
+    margin-right: 56px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__adress-icon {
+    fill: var(--color-brend-dark);
+  }
+  &__burger {
+    display: block;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    fill: var(--color-brend-light);
+    border: none; // важно
+    outline: none; // важно
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* фон фото*/
+.hero-background {
+  background-image: url("../images/fonsecond.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 0.4px;
+  padding-bottom: 12.67px;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-background {
+    background-image: url("../images/fonsecond@2x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 0.4px;
+    padding-bottom: 12.67px;
+  }
+}

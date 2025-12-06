@@ -1,0 +1,51 @@
+.input {
+  position: relative;
+  margin-bottom: 16px;
+
+  &__label {
+    position: absolute;
+    top: 18px;
+    left: 32.85px;
+    line-height: 1;
+    font-size: 13px;
+    font-family: Roboto, sans-serif;
+  }
+
+  &__control {
+    padding: 18px 32.85px;
+    width: 100%;
+    line-height: 1;
+    font-size: 13px;
+    border: 2px solid #747272;
+    border-radius: 32px;
+    background-color: transparent;
+    font-family: Roboto, sans-serif;
+    width: 241px;
+    height: 46px;
+    display: block;
+    margin: 0 auto 8px;
+
+    &:focus {
+      background-color: #747272;
+      outline: none;
+      color: var(--color-brend-light);
+    }
+
+    &::placeholder {
+      color: var(--color-brend-light);
+      line-height: 1;
+      font-size: 13px;
+    }
+
+    &:focus::placeholder {
+      color: var(--color-brend-light);
+    }
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    &__control {
+      width: 310px;
+      height: 52px;
+    }
+  }
+}

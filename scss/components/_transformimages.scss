@@ -1,0 +1,19 @@
+.transform-images {
+  position: relative;
+  width: 500px;
+  height: 695px;
+  &__photo-before {
+    width: 327px; /* розмір фото */
+    height: 327px;
+    border-radius: 50%;
+  }
+  &__photo-after {
+    position: absolute;
+    bottom: -15px;
+    right: -100px;
+    width: 327px; /* розмір фото */
+    height: 328px; /* робимо висоту = ширині для круга */
+    border-radius: 50%; /* робимо круглим */
+    object-fit: cover;
+  }
+}

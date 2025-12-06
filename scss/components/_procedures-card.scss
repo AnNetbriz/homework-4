@@ -1,0 +1,61 @@
+.procedures-card {
+  position: relative; /* для абсолютного накладення */
+  width: 344px;
+  height: 456px;
+  border-radius: 4px 120px 4px 120px;
+  overflow: hidden; /* щоб картинка не виходила за межі */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* текст внизу */
+  gap: 16px;
+  padding: 16px;
+  transition: transform 0.2s;
+
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(1, 28, 68, 0) 47.4%,
+      rgba(1, 28, 68, 0.73) 82.66%,
+      var(--color-brend-dark) 99.06%
+    );
+    pointer-events: none;
+    z-index: 2; 
+  }
+
+  
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    z-index: 3;
+    width: 100%;
+    white-space: normal;
+  }
+
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__image {
+    position: absolute; /* картинка під текстом */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}

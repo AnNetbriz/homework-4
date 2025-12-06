@@ -1,0 +1,35 @@
+.button-primary {
+  padding: 16px 32px;
+  color: #ffffff;
+  background-color: var(--color-brend);
+  border-radius: 32px;
+  border: 1px solid var(--color-brend);
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  
+
+
+  @media screen and (min-width: $bp-desktop){
+  padding: 16px 32px;
+  color: #ffffff;
+  background-color: var(--color-brend);
+  border-radius: 32px;
+  border: 1px solid var(--color-brend);
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 14px;
+  }
+}
+/* disabled */
+.button-primary :disabled {
+  color: gray;
+  background-color: lightgray;
+  cursor: not-allowed;
+  border-color: currentColor;
+}

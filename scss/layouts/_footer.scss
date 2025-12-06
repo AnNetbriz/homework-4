@@ -1,0 +1,211 @@
+.footer {
+  text-align: center;
+  background-image: url("../images/background.png");
+  background-color: #011f4a;
+  padding: 32px 0;
+  position: relative;
+  height: 388px;
+  font-family: Roboto, sans-serif;
+
+  @media screen and (min-width: $bp-desktop) {
+    text-align: left;
+    padding: 56px 0;
+    position: relative;
+    height: 278px;
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 246px;
+    height: 152px;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-image: none;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    &::after {
+      background-image: url("../images/pexels.png");
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    gap: 20px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-basis: 50%;
+      flex-direction: row;
+    }
+  }
+  &__logo {
+    flex-grow: 1;
+    margin-bottom: 42px;
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 0;
+    }
+  }
+  &__nav-list {
+    flex-grow: 1;
+    gap: 16px;
+    font-style: normal;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__nav-link {
+    display: inline-block;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.2s;
+    min-width: max-content;
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: var(--color-brend);
+      font-weight: 400;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    gap: 20px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-basis: 50%;
+      flex-direction: row;
+    }
+  }
+  &__adress-list {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-grow: 1;
+      font-style: normal;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column; /* контакты в колонку */
+      gap: 16px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.2s;
+    min-width: max-content;
+    &:hover {
+      color: var(--color-brend);
+      font-weight: 400;
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    left: 30%;
+    bottom: 35px;
+
+    @media screen and (min-width: $bp-desktop) {
+      top: 180px;
+       left: auto; 
+       bottom: auto;
+    }
+    &-row {
+      flex-direction: row; /* иконки в линию */
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      @media screen and (min-width: $bp-desktop) {
+        gap: 24px;
+      }
+    }
+  }
+
+  &__icon {
+    fill: var(--color-brend-light);
+  }
+  &__info {
+    flex-grow: 1;
+    font-style: normal;
+    gap: 16px;
+    font-style: normal;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    @media screen and (min-width: $bp-desktop) {
+      padding-left: 186px;
+    }
+  }
+  &__copyright {
+    color: #747272;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
+    margin-bottom: 0px;
+    margin-top: 40px;
+    @media screen and (min-width: $bp-desktop) {
+      margin: 0;
+    }
+
+    &:hover {
+      color: var(--color-brend);
+      font-weight: 400;
+    }
+  }
+}
+
+.footer__info {
+  .footer__link {
+    display: inline-block;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.2s;
+    min-width: max-content;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 16px;
+    }
+    &:hover {
+      color: var(--color-brend);
+      font-weight: 400;
+    }
+  }
+}

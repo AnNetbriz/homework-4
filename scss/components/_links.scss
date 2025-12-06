@@ -1,0 +1,10 @@
+.header-link {
+  color: var(--color-brend-dark);
+  font-family: Roboto, sans-serif;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.header-link:hover {
+  color: var(--color-brend);
+}
